@@ -1,1 +1,6 @@
-#STANDARD WEB PROJECT FOR MANAGING CAR PLANNING
+#CABBY
+
+#Simple web page for managing car rides
+
+
+
