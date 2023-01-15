@@ -1,5 +1,6 @@
 console.log("hello")
 
-function alert() {
-    window.alert("test");
+function change_sign_in() {
+    window.location.replace("google.com");
+
 }
