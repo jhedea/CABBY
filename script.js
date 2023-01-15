@@ -1,5 +1,5 @@
 console.log("hello")
 
-function qr() {
-    return 1;
+function alert() {
+    window.alert("test");
 }
