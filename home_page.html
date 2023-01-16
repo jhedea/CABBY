@@ -3,21 +3,16 @@
 <title> Cabby </title>
 <head>
     <style>
-        /*
-        .bg{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            padding: 0;
-            gap: 26px;
 
-            position: absolute;
-            width: 700px;
-            height: 221px;
-            left: 290px;
-            top: 163px;
+        .bg{
+
+            position: relative;
+            width: 1280px;
+            height: 832px;
+
+            background: #FFFFFF;
         }
-         */
+
         .title_box{
             display: flex;
             flex-direction: row;
@@ -142,14 +137,14 @@
     <title></title>
 </head>
 
-<body>
+<body class = "bg">
      <img src = "photos/logo.png" class = "title_box"  alt="CABBY">
      <div class = "box">
         <div button onclick="location.href = 'sign_in_page.html';" class = "button_sign_in"  >
-            <div class = "text_in"> sign in </div>
+            <div class = "text_in"> signin </div>
         </div>
         <div button onclick="location.href = 'sign_up_page.html';" class = "button_sign_up" >
-            <div class = "text_out"> sign up </div>
+            <div class = "text_out"> signup </div>
         </div>
     </div>
 
