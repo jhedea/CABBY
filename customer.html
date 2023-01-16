@@ -1,9 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class = "page">
 <head>
     <meta charset="UTF-8">
     <title>Search</title>
     <style>
+        .page{
+            position: relative;
+            width: 1280px;
+            height: 832px;
+
+            background: #FFFFFF;
+        }
         .logo{
             display: flex;
             flex-direction: row;
@@ -27,11 +34,7 @@
             background: #FFFFFF;
             border-radius: 40.875px;
         }
-        /* Set the size of the div element that contains the map */
-        #map {
-            height: 400px; /* The height is 400 pixels */
-            width: 100%; /* The width is the width of the web page */
-        }
+
 
 
     </style>
@@ -39,12 +42,8 @@
 </head>
 <body>
 <img src = "photos/logo.png" class = "logo"  alt="SIGN IN">
-<div class = "map_bg">
+<iframe src = "https://www.google.com/maps/dir///@45.941869,24.978284,7z/data=!4m2!4m1!3e0" class = "map_bg">
+</iframe>
 
-    <iframe src = "https://www.google.com/maps/dir///@45.941869,24.978284,7z/data=!4m2!4m1!3e0">
-
-    </iframe>
-
-</div>
 </body>
 </html>
