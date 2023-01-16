@@ -1,0 +1,128 @@
+.bg{
+
+    position: relative;
+    width: 1280px;
+    height: 832px;
+
+    background: #FFFFFF;
+}
+
+.title_box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    gap: 26px;
+
+    position: absolute;
+    width: 700px;
+    height: 221px;
+    left: 290px;
+    top: 163px;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    gap: 13px;
+
+    position: absolute;
+    width: 444px;
+    height: 181px;
+    left: 418px;
+    top: 463px;
+}
+.button_sign_in{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 150px;
+    gap: 10px;
+
+    width: 44px;
+    height: 84px;
+
+    background: #FFFFFF;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+
+
+
+}
+.button_sign_up{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 150px;
+    gap: 10px;
+
+    width: 44px;
+    height: 84px;
+
+    background: #FFFFFF;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+
+}
+
+.text_in{
+
+    width: 200px;
+    height: 40px;
+
+    font-family: 'Josefin Sans',serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 44px;
+
+    /* identical to box height */
+
+    color: #000000;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    word-wrap: break-word;
+
+}
+.text_out{
+
+    width: 100px;
+    height: 40px;
+
+    font-family: 'Josefin Sans',serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 44px;
+
+    /* identical to box height */
+
+    color: #000000;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    word-wrap: break-word;
+
+}
