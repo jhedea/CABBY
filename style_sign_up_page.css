@@ -118,7 +118,7 @@
     flex-grow: 0;
 }
 .text_username{
-    width: 69px;
+    width: 169px;
     height: 20px;
 
     font-family: 'Josefin Sans';
@@ -203,7 +203,7 @@
 }
 .text_password{
 
-    width: 69px;
+    width: 169px;
     height: 20px;
 
     font-family: 'Josefin Sans',serif;
@@ -372,7 +372,7 @@
     flex-grow: 0;
 }
 .text_name{
-    width: 56px;
+    width: 65px;
     height: 20px;
 
     font-family: 'Josefin Sans';
@@ -457,7 +457,7 @@
 .text_gender{
     /* Name */
 
-    width: 67px;
+    width: 77px;
     height: 20px;
 
     font-family: 'Josefin Sans';
@@ -543,7 +543,7 @@
 }
 .text_language{
 
-    width: 93px;
+    width: 120px;
     height: 20px;
 
     font-family: 'Josefin Sans';
@@ -623,7 +623,7 @@
     flex-grow: 0;
 }
 .text_bio{
-    width: 29px;
+    width: 40px;
     height: 20px;
 
     font-family: 'Josefin Sans';
@@ -717,7 +717,7 @@
     flex-grow: 0;
 }
 .text_address{
-    width: 72px;
+    width: 100px;
     height: 20px;
 
     font-family: 'Josefin Sans';
@@ -796,7 +796,7 @@
     flex-grow: 0;
 }
 .text_zip_code{
-    width: 81px;
+    width: 100px;
     height: 20px;
 
     font-family: 'Josefin Sans';
@@ -873,7 +873,7 @@
     flex-grow: 0;
 }
 .text_email{
-    width: 49px;
+    width: 60px;
     height: 20px;
 
     font-family: 'Josefin Sans';
