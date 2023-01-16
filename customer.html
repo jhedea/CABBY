@@ -5,6 +5,7 @@
     <title>Search</title>
     <style>
         .page{
+
             position: relative;
             width: 1280px;
             height: 832px;
@@ -34,15 +35,108 @@
             background: #FFFFFF;
             border-radius: 40.875px;
         }
+        .start{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0px;
+            gap: 13px;
+
+            position: absolute;
+            width: 350px;
+            height: 52px;
+            left: 412px;
+            top: 62px;
+
+            background: #FFFFFF;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+            border-radius: 30px;
+        }
+
+        .end{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 10px 150px 10px 30px;
+            gap: 10px;
+
+            position: absolute;
+            width: 350px;
+            height: 52px;
+            left: calc(50% - 350px/2 + 341px);
+            top: calc(50% - 52px/2 - 328px);
+
+            background: #FFFFFF;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+            border-radius: 30px;
+        }
+
+        .start_text{
+            width: 204px;
+            height: 32px;
+
+            font-family: 'Josefin Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 32px;
+
+            /* identical to box height */
+
+            color: #B0B0B0;
+
+
+            /* Inside auto layout */
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+        }
+
+
+        .end_text{
+
+            width: 204px;
+            height: 32px;
+
+            font-family: 'Josefin Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 32px;
+
+            /* identical to box height */
+
+            color: #AAAAAA;
+
+
+            /* Inside auto layout */
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+        }
 
 
 
     </style>
 
 </head>
-<body>
+<body class = "page">
 <img src = "photos/logo.png" class = "logo"  alt="SIGN IN">
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45669.72061436299!2d23.771645543617318!3d44.323156600523795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4752d70e6d6dcd07%3A0x4650f2eadbde99f9!2sCraiova!5e0!3m2!1sen!2sro!4v1673874406765!5m2!1sen!2sro" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class = "map_bg"></iframe>
+
+
+<div class = "start">
+
+    <div class = "start_text"> start dest</div>
+
+</div>
+
+<div class = "end">
+
+    <div class = "end_text"> end dest</div>
+
+</div>
+
 </body>
 
 </html>
