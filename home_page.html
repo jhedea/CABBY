@@ -1,13 +1,14 @@
-<html>
+<html lang="EN-en">
 
 <title> Cabby </title>
 <head>
     <style>
-        .title_box{
+        /*
+        .bg{
             display: flex;
             flex-direction: row;
             align-items: center;
-            padding: 0px;
+            padding: 0;
             gap: 26px;
 
             position: absolute;
@@ -16,14 +17,25 @@
             left: 290px;
             top: 163px;
         }
-        .button_sign_in{
-            /* Frame 2 */
+         */
+        .title_box{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0;
+            gap: 26px;
 
-            /* Auto layout */
+            position: absolute;
+            width: 700px;
+            height: 221px;
+            left: 290px;
+            top: 163px;
+        }
+        .box{
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 0px;
+            padding: 0;
             gap: 13px;
 
             position: absolute;
@@ -31,37 +43,116 @@
             height: 181px;
             left: 418px;
             top: 463px;
+        }
+        .button_sign_in{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 150px;
+            gap: 10px;
+
+            width: 44px;
+            height: 84px;
+
+            background: #FFFFFF;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+            border-radius: 30px;
+
+            /* Inside auto layout */
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+
+
 
 
         }
         .button_sign_up{
-            /* Frame 2 */
-
-            /* Auto layout */
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            justify-content: center;
             align-items: center;
-            padding: 0px;
-            gap: 13px;
+            padding: 20px 150px;
+            gap: 10px;
 
-            position: absolute;
-            width: 444px;
-            height: 181px;
-            left: 418px;
-            top: 600px;
+            width: 44px;
+            height: 84px;
+
+            background: #FFFFFF;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+            border-radius: 30px;
+
+            /* Inside auto layout */
+            flex: none;
+            order: 1;
+            flex-grow: 0;
 
 
         }
 
+        .text_in{
+
+            width: 100px;
+            height: 40px;
+
+            font-family: 'Josefin Sans',serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 44px;
+            line-height: 44px;
+
+            /* identical to box height */
+
+            color: #000000;
+
+
+            /* Inside auto layout */
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            word-wrap: break-word;
+
+        }
+        .text_out{
+
+            width: 100px;
+            height: 40px;
+
+            font-family: 'Josefin Sans',serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 44px;
+            line-height: 44px;
+
+            /* identical to box height */
+
+            color: #000000;
+
+
+            /* Inside auto layout */
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            word-wrap: break-word;
+
+        }
 
     </style>
+    <title></title>
 </head>
 
 <body>
-    <img src = "photos/logo.png" class = "title_box" > </div>
+     <img src = "photos/logo.png" class = "title_box"  alt="CABBY">
+     <div class = "box">
+        <div button onclick="location.href = 'sign_in_page.html';" class = "button_sign_in"  >
+            <div class = "text_in"> sign in </div>
+        </div>
+        <div button onclick="location.href = 'sign_up_page.html';" class = "button_sign_up" >
+            <div class = "text_out"> sign up </div>
+        </div>
+    </div>
 
-    <div button onclick="location.href = 'sign_in_page.html';" class = "button_sign_in"  > <img src = "photos/button_in.png"> </button>  </div>
-    <div button onclick="location.href = 'sign_up_page.html';" class = "button_sign_up" >  <img src = "photos/button_up.png"> </button>  </div>
 
 </body>
 
