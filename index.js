@@ -113,4 +113,121 @@ signInForm.addEventListener('submit', function(event) {
 });
 
 
+// Get references to relevant elements
+const addToCartButtons = document.querySelectorAll('.add-to-cart');
+const cartIcon = document.querySelector('#cart-icon');
+const cartCount = document.querySelector('#cart-count');
+const cartItemsList = document.querySelector('#cart-items');
+
+// Initialize cart
+let cart = [];
+loadCart();
+
+// Listen for add to cart button clicks
+addToCartButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        const carId = button.getAttribute('data-car-id');
+        addToCart(carId);
+    });
+});
+
+// Add a car to the cart with the given ID
+function addToCart(carId) {
+    // Find car in cart, or add it if it's not already there
+    const cartItem = cart.find(item => item.carId === carId);
+    if (cartItem) {
+        cartItem.quantity++;
+    } else {
+        cart.push({
+            carId: carId,
+            quantity: 1
+        });
+    }
+
+    // Save cart to local storage and update UI
+    saveCart();
+    updateCartUI();
+}
+
+// Remove a car from the cart with the given ID
+function removeFromCart(carId) {
+    // Find car in cart and remove it
+    const cartItemIndex = cart.findIndex(item => item.carId === carId);
+    if (cartItemIndex !== -1) {
+        cart.splice(cartItemIndex, 1);
+    }
+
+    // Save cart to local storage and update UI
+    saveCart();
+    updateCartUI();
+}
+
+// Save the current cart to local storage
+function saveCart() {
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+// Load the current cart from local storage
+function loadCart() {
+    const savedCart = localStorage.getItem('cart');
+    if (savedCart) {
+        cart = JSON.parse(savedCart);
+    }
+    updateCartUI();
+}
+
+// Update the cart UI with the current cart contents
+function updateCartUI() {
+    // Update cart count in header
+    const cartItemCount = cart.reduce((total, item) => total + item.quantity, 0);
+    cartCount.textContent = cartItemCount;
+
+    // Update cart icon in header
+    if (cartItemCount > 0) {
+        cartIcon.classList.add('has-items');
+    } else {
+        cartIcon.classList.remove('has-items');
+    }
+
+    // Update cart items list
+    cartItemsList.innerHTML = ''; // Clear previous cart items
+    cart.forEach(item => {
+        const car = getCarById(item.carId);
+        const cartItem = document.createElement('li');
+        cartItem.innerHTML = `
+      <span>${car.make} ${car.model}</span>
+      <span>${car.pricePerDay} per day</span>
+      <span>${item.quantity} x</span>
+      <button class="remove-from-cart" data-car-id="${car.id}">Remove</button>
+    `;
+        cartItemsList.appendChild(cartItem);
+    });
+
+    // Listen for remove from cart button clicks
+    const removeFromCartButtons = document.querySelectorAll('.remove-from-cart');
+    removeFromCartButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const carId = button.getAttribute('data-car-id');
+            removeFromCart(carId);
+        });
+    });
+}
+
+// Get car data by ID from server
+function getCarById(carId) {
+    // Make API request to get car data
+    const url = `https://cabby.github.io.com/api/cars/${carId}`;
+    return fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            return data;
+        })
+        .catch(error => {
+            console.error(error);
+            alert('Error getting car data.')
+        })
+
+}
+
+
 }
